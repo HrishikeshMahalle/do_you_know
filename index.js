@@ -22,7 +22,7 @@ const ques_ans = [
 
 const play = (userName) => {
     console.log(chalk.blue('Welcome to the quiz ') + userName);
-    console.log(chalk.blue('How well do you know Hamza?'));
+    console.log(chalk.blue('Do you know Hrishi?'));
     console.log(chalk.blue("Let's Start ..."));
 
     ques_ans.map(qa => {
