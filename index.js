@@ -7,27 +7,40 @@ let progress = 0;
 
 const ques_ans = [
     {
-        question: 'What is my favourite color? ',
+        question: 'My Favourite Comedy drama Series ',
+        answer: 'the office'
+    },
+    {
+        question: ' Whats ma favourite color ',
         answer: 'black'
     },
     {
-        question: 'What is my favourite number? ',
-        answer: '7'
+        question: 'Who is my hero? ',
+        answer: 'messi'
     },
     {
-        question: 'My favourite super hero? ',
-        answer: 'ironman'
+        question: 'Which food do i like the Most ',
+        answer: 'pizza'
+    },
+    {
+        question: 'My favourite sport ',
+        answer: 'football'
+    }
+    ,
+    {
+        question: 'Am i ever consistent? N/Y ',
+        answer: 'N'
     }
 ];
 
 const play = (userName) => {
     console.log(chalk.blue('Welcome to the quiz ') + userName);
-    console.log(chalk.blue('Do you know Hrishi?'));
+    console.log(chalk.blue('How well do you know HrishiX?'));
     console.log(chalk.blue("Let's Start ..."));
 
     ques_ans.map(qa => {
         let answer = readlineSync.question(chalk.green(qa.question));
-        if(answer.toLowerCase() === qa.answer) {
+        if(answer.toLowerCase() === qa.answer.toLowerCase()) {
         progress += 1;
         console.log(chalk.green('Bulls eye'));
         console.log(chalk.blue('Your score so far: ') + String(progress));
